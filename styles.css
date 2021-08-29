@@ -1,0 +1,153 @@
+body {
+  background: #e3f6ff;
+}
+.mainBox {
+  width: 844.34px;
+  height: 932.98px;
+  left: 297.83px;
+  top: 189.53px;
+
+  border: 6px solid #aae3fd;
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+}
+section {
+  background: #aae3fd;
+  width: 844.34px;
+  height: 228.09px;
+  left: 297.83px;
+  top: 189.09px;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 10px;
+}
+.search {
+  position: inherit;
+  width: 730.66px;
+  height: 43.35px;
+  left: 348.41px;
+  top: 208.61px;
+
+  background: #e3f6ff;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 28.1448px;
+  line-height: 33px;
+  text-align: center;
+  padding-top: 2mm;
+}
+.horizontalList {
+  list-style: none;
+  display: -webkit-inline-box;
+
+  padding-inline-start: 100px;
+  margin-block-start: 1.5em;
+}
+.todayImage {
+  display: block;
+  margin: 0 auto;
+}
+.todayImageCaption {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  font-size: 24px;
+}
+.leftINF {
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 25px;
+  list-style: none;
+}
+.sunnyTop {
+  font-size: 17px;
+}
+.date {
+  color: #858a8e;
+  font-size: 11px;
+  line-height: 15px;
+}
+.RightInf {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  list-style: none;
+}
+.days {
+  list-style: none;
+  display: inherit;
+  margin: 0;
+  position: absolute;
+  width: 730.66px;
+  height: 87.7px;
+  left: 315px;
+  top: 472.96px;
+  line-height: 45px;
+}
+.day1,
+.day2,
+.day3,
+.day4,
+.day5 {
+  background: #fdfdfd;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21.1086px;
+  line-height: 25px;
+  padding: 10px 0;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.eachDayInfo {
+  list-style: none;
+  font: size 15px;
+}
+.dayNumber {
+  list-style: none;
+  color: #858a8e;
+  font-size: 13px;
+}
+.day1LeftInf {
+  display: inline;
+  margin: 0 15px;
+  text-align: -webkit-match-parent;
+}
+.horizontalListDay1 {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.horizontalListDay2 {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.horizontalListDay2Li1,
+.horizontalListDay2Li2,
+.horizontalListDay2Li3 {
+  display: inline;
+  margin: 0 60px;
+}
+.horizontalListDay4Li1,
+.horizontalListDay4Li2,
+.horizontalListDay4Li3 {
+  display: inline;
+  margin: 0 42px;
+}
+.searchBox {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}

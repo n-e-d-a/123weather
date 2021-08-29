@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </head>
+  <body>
+
+
+    <div class="container">
+
+
+          <div class="mainbox">
+
+
+
+
+
+
+            <section>
+  
+         
+         
+         
+   <form class="searchBox" id="search-city-form">
+      <div class="row">
+        <div class="col-6">
+            <input
+            type="search"
+            placeholder="Enter City"
+            class="form-control col-10"
+            id="search-city-enter"
+            autofocus="on"
+          />
+        </div>
+        <div class="col-2">
+            <input type="submit" value="search" class="form-control btn btn-primary" id="search-city" />
+        </div>
+        <div class="col-3">
+          <input type="search" value="Current Position" class="btn btn-success" id="current-position"  />
+      </div>
+      </div>
+   </form>
+
+
+
+
+
+        <div class="horizontalList">
+          <div class="col-5">
+              <ul class="leftINF">
+                  <li><strong id="city-name">Mashhad </strong></li>
+                  <li class="sunnyTop" id="description-weather">Partly Sunny</li>
+                  <li class="sunnyTop" id="date-day" >Tuesday</li>
+                  <li class="date" id="date-num" > September 20</li>
+                  <li class="date" id="date-hour" >11:39 AM</li>
+                </ul>
+          </div>
+          <div class="col-5">
+              <figure>
+                  <img class="todayImage" src="images/Group6.svg" alt="" />
+                  <figcaption class="todayImageCaption" > <span id="temp-num"> 35° </span> <span id="temp-celsius"> <a href="#"> C </a></span> | <span id="temp-fahrenheit"> <a href="#"> F </a> </span> </figcaption>
+                </figure>
+          </div>
+          <div class="col-5">
+              <ul class="RightInf">
+                  <li >RealFeel:<span id="feels-like"> 38° </span> </li>
+                  <li >Wind: NE <span id="wind-km" >11 </span>km/h</li>
+                </ul>
+          </div>
+        </div>
+
+
+
+       
+      
+       </section>
+
+
+       <ul class="days">
+
+        <li class="day1">
+           <ul class="horizontalListDay2">
+              <li class="horizontalListDay2Li1">WED </li>
+              <li class="horizontalListDay2Li2">Mostly Sunny</li>
+               <li class="horizontalListDay2Li3"><img src="images/Group 7.svg" >
+                 <span>35° </span>
+               </li>
+           </ul>
+        </li>
+          <br/>
+        
+          <li class="day2">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay2Li1">THU </li>
+              <li class="horizontalListDay2Li2">Mostly Sunny</li>
+               <li class="horizontalListDay2Li3"><img src="images/Group 7.svg" >
+                 <span>35°</span>
+               </li>
+            </ul>
+          </li>
+            <br/>
+
+          <li class="day3">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay4Li1">FRI</li>
+              <li class="horizontalListDay4Li2"><small>Mostly Sunny and very warm</small></li>
+                <li class="horizontalListDay4Li3"><img src="images/Group 7.svg" >
+                  <span>36°</span>
+                </li>
+            </ul>
+          </li>
+            <br/>
+        
+          <li class="day4">
+           <ul class="horizontalListDay2">
+              <li class="horizontalListDay4Li1">SAT</li>
+              <li class="horizontalListDay4Li2"><small>Hot with plently of sunshine</small></li>
+               <li class="horizontalListDay4Li3"><img src="images/sunny.svg" >
+                 <span>36°</span>
+               </li>
+           </ul>
+          </li>
+
+
+   
+   </div>
+</div>
+<script src="index.js"></script>
+  </body>
+</html>
