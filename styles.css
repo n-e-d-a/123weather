@@ -1,156 +1,138 @@
-body {
-  background: #e3f6ff;
+.source-code {
+  max-width: 600px;
+  margin: 30px auto;
 }
-.mainBox {
-  width: 844.34px;
-  height: 932.98px;
-  left: 297.83px;
-  top: 189.53px;
-
-  border: 6px solid #aae3fd;
-  box-sizing: border-box;
-  display: block;
-  margin: 0 auto;
+.container {
+  font-size: 18px;
+  max-width: 600px;
+  margin: 30px auto;
+  margin-bottom: 0px;
+  padding: 20px;
+  border-radius: 12px;
+  background-image: radial-gradient(
+    circle,
+    #103e8c,
+    #103e8c,
+    #103e8c,
+    #103e8c,
+    #103e8c,
+    #15418c,
+    #1a438c,
+    #1e468c,
+    #274b8b,
+    #30518a,
+    #395689,
+    #415b88
+  );
+  color: white;
 }
-section {
-  background: #aae3fd;
-  width: 844.34px;
-  height: 228.09px;
-  left: 297.83px;
-  top: 189.09px;
-  display: block;
-  margin: 0 auto;
-  position: absolute;
-  border-radius: 10px;
-}
-.search {
-  position: inherit;
-  width: 730.66px;
-  height: 43.35px;
-  left: 348.41px;
-  top: 208.61px;
-
-  background: #e3f6ff;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 28.1448px;
-  line-height: 33px;
-  text-align: center;
-  padding-top: 2mm;
-}
-.horizontalList {
-  list-style: none;
-  display: -webkit-inline-box;
-
-  padding-inline-start: 100px;
-  margin-block-start: 1.5em;
-}
-.todayImage {
-  display: block;
-  margin: 0 auto;
-}
-.todayImageCaption {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+ul {
   padding: 0;
-  font-size: 24px;
 }
-.leftINF {
-  font-family: Roboto;
-  font-style: normal;
-  font-size: 20px;
-  line-height: 25px;
+li {
   list-style: none;
 }
-.sunnyTop {
-  font-size: 17px;
+li:first-letter {
+  text-transform: capitalize;
 }
-.date {
-  color: #858a8e;
-  font-size: 11px;
-  line-height: 15px;
+#search-city-searchIcon:hover {
+  color: red;
 }
-.RightInf {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  list-style: none;
+
+bi bi-sun {
 }
-.days {
-  list-style: none;
-  display: inherit;
-  margin: 0;
-  position: absolute;
-  width: 730.66px;
-  height: 87.7px;
-  left: 315px;
-  top: 472.96px;
-  line-height: 45px;
-}
-.day1,
-.day2,
-.day3,
-.day4,
-.day5 {
-  background: #fdfdfd;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 21.1086px;
-  line-height: 25px;
+
+#day1,
+#day2,
+#day3,
+#day4,
+#day5 {
+  text-align: center;
+  background: #4568a3;
+  max-width: 100px;
+  height: 300px;
+
+  border-radius: 12px;
   padding: 10px 0;
   margin: 0 auto;
-  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 25px;
 }
-
-.eachDayInfo {
-  list-style: none;
-  font: size 15px;
+#temp-num {
+  font-size: 44px;
 }
-.dayNumber {
-  list-style: none;
-  color: #858a8e;
+#city-name {
+  font-size: 24px;
+}
+#description-weather {
+  font-size: 18px;
+}
+#date-day,
+#date-num,
+#date-hour {
   font-size: 13px;
 }
-.day1LeftInf {
-  display: inline;
-  margin: 0 15px;
-  text-align: -webkit-match-parent;
+.RightInf {
+  font-size: 14px;
+  margin-top: 70px;
 }
-.horizontalListDay1 {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+.degrees {
+  margin: -10px;
 }
-.horizontalListDay2 {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+.horizontalListDay {
+  font-size: 20px;
+  margin-top: 20px;
 }
-.horizontalListDay2Li1,
-.horizontalListDay2Li2,
-.horizontalListDay2Li3 {
-  display: inline;
-  margin: 0 60px;
+.horizontalListDayDescription {
+  margin-top: 20px;
 }
-.horizontalListDay4Li1,
-.horizontalListDay4Li2,
-.horizontalListDay4Li3 {
-  display: inline;
-  margin: 0 42px;
+.minTemp {
+  margin-top: 20px;
+  margin-bottom: -15px;
 }
-.searchBox {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
+.maxTemp {
+  margin-top: -15px;
 }
-.source {
-  top: 400;
+.line {
+  max-width: 70px;
+  margin-left: 10px;
+}
+#deg {
+  font-size: 30px;
+}
+#caption {
+  margin-top: -10px;
+}
+#icon {
+  margin-top: -20px;
+  background-image: radial-gradient(
+    circle,
+    #e6ecf5,
+    #bccae2,
+    #94a8cf,
+    #6f87bc,
+    #4b67a8,
+    #3a599f,
+    #284b95,
+    #103e8c,
+    #103e8c,
+    #103e8c,
+    #103e8c,
+    #103e8c
+  );
+}
+
+#temp-celsius .active {
+  /*color: white;*/
+  cursor: default;
+}
+
+#c {
+  text-decoration: none;
+}
+#f {
+  text-decoration: none;
+  cursor: default;
 }

@@ -5,147 +5,247 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="styles.css"/>
+
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
-
-
-    <div class="container">
-
-
-          <div class="mainbox">
-
-
-
-
-
-
-            <section>
-  
-         
-         
-         
-   <form class="searchBox" id="search-city-form">
-      <div class="row">
-        <div class="col-6">
-            <input
-            type="search"
-            placeholder="Enter City"
-            class="form-control col-10"
-            id="search-city-enter"
-            autofocus="on"
+    <div class="source-code">
+      <div class="container">
+        <div class="input-group mb-3" id="search-city-searchIcon">
+          <div class="input-group-prepend" >
+           
+            <button class="btn btn-outline-secondary" type="button" >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="white"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+                id="";
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                />
+              </svg>
+            </button>
+            
+          </div>
+          
+          <input
+            type="text"
+            class="form-control"
+            id="search-city-form"
+            placeholder=""
+            aria-label=""
+            aria-describedby="basic-addon1"
+            autocomplete="off"
           />
         </div>
-        <div class="col-2">
-            <input type="submit" value="search" class="form-control btn btn-primary" id="search-city" />
-        </div>
-        <div class="col-3">
-          <input type="search" value="Current Position" class="btn btn-success" id="current-position"  />
-      </div>
-      </div>
-   </form>
 
-
-
-
-
-        <div class="horizontalList">
+        <div class="row" id="horizontalList">
           <div class="col-5">
-              <ul class="leftINF">
-                  <li><strong id="city-name">Mashhad </strong></li>
-                  <li class="sunnyTop" id="description-weather">Partly Sunny</li>
-                  <li class="sunnyTop" id="date-day" >Tuesday</li>
-                  <li class="date" id="date-num" > September 20</li>
-                  <li class="date" id="date-hour" >11:39 AM</li>
-                </ul>
-          </div>
-          <div class="col-5">
-              <figure>
-                  <img class="todayImage" src="images/Group6.svg" alt="" />
-                  <figcaption class="todayImageCaption" > <span id="temp-num"> 35° </span> <span id="temp-celsius"> <a href="#"> C </a></span> | <span id="temp-fahrenheit"> <a href="#"> F </a> </span> </figcaption>
-                </figure>
-          </div>
-          <div class="col-5">
-              <ul class="RightInf">
-                  <li >RealFeel:<span id="feels-like"> 38° </span> </li>
-                  <li >Wind: NE <span id="wind-km" >11 </span>km/h</li>
-                </ul>
-          </div>
-        </div>
-
-
-
-       
-      
-       </section>
-
-
-       <ul class="days">
-
-        <li class="day1">
-           <ul class="horizontalListDay2">
-              <li class="horizontalListDay2Li1">WED </li>
-              <li class="horizontalListDay2Li2">Mostly Sunny</li>
-               <li class="horizontalListDay2Li3"><img src="images/Group 7.svg" >
-                 <span>35° </span>
-               </li>
-           </ul>
-        </li>
-          <br/>
-        
-          <li class="day2">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay2Li1">THU </li>
-              <li class="horizontalListDay2Li2">Mostly Sunny</li>
-               <li class="horizontalListDay2Li3"><img src="images/Group 7.svg" >
-                 <span>35°</span>
-               </li>
+            <ul class="leftINF">
+              <li><strong id="city-name"></strong></li>
+              <li class="sunnyTop" id="description-weather"></li>
+              <li class="sunnyTop" id="date-day">Tuesday</li>
+              <li class="date" id="date-num">September 20</li>
+              <li class="date" id="date-hour">11:39 AM</li>
             </ul>
-          </li>
-            <br/>
-
-          <li class="day3">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay4Li1">FRI</li>
-              <li class="horizontalListDay4Li2"><small>Mostly Sunny and very warm</small></li>
-                <li class="horizontalListDay4Li3"><img src="images/Group 7.svg" >
-                  <span>36°</span>
-                </li>
+          </div>
+          <div class="col-4" >
+            <img src="https://icon-library.com/icon/google-weather-icon-20.html.html" id=icon />
+          <!--
+            <svg  id="icon"
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+              height="16"
+            
+							fill="currentColor"
+							class="bi bi-sun"
+							viewBox="0 0 16 16"
+            > 
+            
+							<path 
+								d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+							/>
+            </svg>
+            -->
+            <figure>
+              <figcaption class="todayImageCaption" id="caption" >
+								<span id="temp-num"> </span><sup id="deg" > &deg </sup>
+								<span class="degrees">
+                <span id="temp-celsius"> <a href="#" class="active" id="c"> C </a></span> |
+                <span id="temp-fahrenheit"> <a href="#"  id="f"> F </a> </span>
+								</span>
+							</figcaption>
+            </figure>
+          </div>
+          <div class="col-3">
+            <ul class="RightInf">
+              <li>RealFeel: <span id="feels-like">  </span><sup>°</sup></li>
+              <li>Wind: NE <span id="wind-km"> </span>km/h</li>
             </ul>
-          </li>
-            <br/>
-        
-          <li class="day4">
-           <ul class="horizontalListDay2">
-              <li class="horizontalListDay4Li1">SAT</li>
-              <li class="horizontalListDay4Li2"><small>Hot with plently of sunshine</small></li>
-               <li class="horizontalListDay4Li3"><img src="images/sunny.svg" >
-                 <span>36°</span>
-               </li>
-           </ul>
-          </li>
+          </div>
+        </div>
 
+        <div class="row" id="days">
+          <div class="col-2" id="day1">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay">WED</li>
+             
+              <li class="horizontalListDay2Li3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+                <li>35° </li>
+							</li>
+							 <li class="horizontalListDayDescription">Mostly Sunny</li>
+							 <li class="minTemp"> 32 </li>
+							 <hr/ class="line">
+							 <li class="maxTemp">39</li>
+            </ul>
+          </div>
 
-   
-   </div>
-</div>
-<p class="source">
-        <a href="https://github.com/Mabchir/My-Weather-App" target="_blank"
+          <div class="col-2" id="day2">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay">THU</li>
+              
+              <li class="horizontalListDay2Li3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+                <li>35°</li>
+							</li>
+							<li class="horizontalListDayDescription">Mostly Sunny</li>
+							<li class="minTemp"> 32 </li>
+							<hr/ class="line">
+							<li class="maxTemp">39</li>
+            </ul>
+          </div>
+
+          <div class="col-2" id="day3">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay">FRI</li>
+              <li class="horizontalListDay4Li2">
+               
+              </li>
+              <li class="horizontalListDay4Li3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+                <li>36°</li>
+							</li >
+							<li class="horizontalListDayDescription">
+							 <small>Mostly Sunny and very warm</small>
+							</li>
+							<li class="minTemp"> 32 </li>
+							<hr/ class="line">
+							<li class="maxTemp">39</li>
+            </ul>
+          </div>
+
+          <div class="col-2" id="day4">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay">SAT</li>
+              
+              <li class="horizontalListDay4Li3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+								</svg>
+								<li>
+								<span>36°</span>
+								</li>
+							</li>
+							<li class="horizontalListDayDescription">
+                <small>Hot with plently of sunshine</small>
+							</li>
+							<li class="minTemp"> 32 </li>
+							<hr/ class="line">
+							<li class="maxTemp">39</li>
+            </ul>
+          </div>
+
+          <div class="col-2" id="day5">
+            <ul class="horizontalListDay2">
+              <li class="horizontalListDay">SUN</li>
+             
+              <li class="horizontalListDay4Li3">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-sun"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+                  />
+                </svg>
+                <li>36°</li>
+							</li>
+							 <li class="horizontalListDayDescription">
+                <small>Hot with plently of sunshine</small>
+							</li>
+							<li class="minTemp"> 32 </li>
+							<hr/ class="line">
+							<li class="maxTemp">39</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="source">
+        <a href="https://github.com/n-e-d-a/123weather" target="_blank"
           >Open-source code</a
         >
         by Neda Zare
       </p>
-
-<script src="index.js"></script>
-
+    </div>
+    <script src="index.js"></script>
   </body>
 </html>
