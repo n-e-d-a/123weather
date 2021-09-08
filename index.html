@@ -13,43 +13,48 @@
     />
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/styles.css" />
   </head>
 
   <body>
     <div class="source-code">
       <div class="container">
-        <div class="input-group mb-3" id="search-city-searchIcon">
-          <div class="input-group-prepend" >
-           
-            <button class="btn btn-outline-secondary" type="button" >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="white"
-                class="bi bi-search"
-                viewBox="0 0 16 16"
-                id="";
+        <form id="search-form">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button
+                class="btn btn-outline-secondary"
+                type="button"
+                id="search-city-searchIcon"
               >
-                <path
-                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-                />
-              </svg>
-            </button>
-            
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="white"
+                  class="bi bi-search"
+                  viewBox="0 0 16 16"
+                  id=""
+                  ;
+                >
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <input
+              type="text"
+              class="form-control"
+              id="search-city-form"
+              placeholder=""
+              aria-label=""
+              aria-describedby="basic-addon1"
+              autocomplete="off"
+            />
           </div>
-          
-          <input
-            type="text"
-            class="form-control"
-            id="search-city-form"
-            placeholder=""
-            aria-label=""
-            aria-describedby="basic-addon1"
-            autocomplete="off"
-          />
-        </div>
+        </form>
 
         <div class="row" id="horizontalList">
           <div class="col-5">
@@ -61,183 +66,33 @@
               <li class="date" id="date-hour">11:39 AM</li>
             </ul>
           </div>
-          <div class="col-4" >
-            <img src="https://icon-library.com/icon/google-weather-icon-20.html.html" id=icon />
-          <!--
-            <svg  id="icon"
-							xmlns="http://www.w3.org/2000/svg"
-							width="16"
-              height="16"
-            
-							fill="currentColor"
-							class="bi bi-sun"
-							viewBox="0 0 16 16"
-            > 
-            
-							<path 
-								d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-							/>
-            </svg>
-            -->
+          <div class="col-4">
+            <img
+              src="https://icon-library.com/icon/google-weather-icon-20.html.html"
+              id="icon"
+            />
+
             <figure>
-              <figcaption class="todayImageCaption" id="caption" >
-								<span id="temp-num"> </span><sup id="deg" > &deg </sup>
-								<span class="degrees">
-                <span id="temp-celsius"> <a href="#" class="active" id="c"> C </a></span> |
-                <span id="temp-fahrenheit"> <a href="#"  id="f"> F </a> </span>
-								</span>
-							</figcaption>
+              <figcaption class="todayImageCaption" id="caption">
+                <span id="temp-num"> </span><sup id="deg"> &deg </sup>
+                <span class="degrees">
+                  <span id="temp-celsius">
+                    <a href="#" class="active" id="c"> C </a></span
+                  >
+                  |
+                  <span id="temp-fahrenheit"> <a href="#" id="f"> F </a> </span>
+                </span>
+              </figcaption>
             </figure>
           </div>
           <div class="col-3">
             <ul class="RightInf">
-              <li>RealFeel: <span id="feels-like">  </span><sup>°</sup></li>
+              <li>RealFeel: <span id="feels-like"> </span><sup>°</sup></li>
               <li>Wind: NE <span id="wind-km"> </span>km/h</li>
             </ul>
           </div>
         </div>
-
-        <div class="row" id="days">
-          <div class="col-2" id="day1">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay">WED</li>
-             
-              <li class="horizontalListDay2Li3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-sun"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                  />
-                </svg>
-                <li>35° </li>
-							</li>
-							 <li class="horizontalListDayDescription">Mostly Sunny</li>
-							 <li class="minTemp"> 32 </li>
-							 <hr/ class="line">
-							 <li class="maxTemp">39</li>
-            </ul>
-          </div>
-
-          <div class="col-2" id="day2">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay">THU</li>
-              
-              <li class="horizontalListDay2Li3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-sun"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                  />
-                </svg>
-                <li>35°</li>
-							</li>
-							<li class="horizontalListDayDescription">Mostly Sunny</li>
-							<li class="minTemp"> 32 </li>
-							<hr/ class="line">
-							<li class="maxTemp">39</li>
-            </ul>
-          </div>
-
-          <div class="col-2" id="day3">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay">FRI</li>
-              <li class="horizontalListDay4Li2">
-               
-              </li>
-              <li class="horizontalListDay4Li3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-sun"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                  />
-                </svg>
-                <li>36°</li>
-							</li >
-							<li class="horizontalListDayDescription">
-							 <small>Mostly Sunny and very warm</small>
-							</li>
-							<li class="minTemp"> 32 </li>
-							<hr/ class="line">
-							<li class="maxTemp">39</li>
-            </ul>
-          </div>
-
-          <div class="col-2" id="day4">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay">SAT</li>
-              
-              <li class="horizontalListDay4Li3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-sun"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                  />
-								</svg>
-								<li>
-								<span>36°</span>
-								</li>
-							</li>
-							<li class="horizontalListDayDescription">
-                <small>Hot with plently of sunshine</small>
-							</li>
-							<li class="minTemp"> 32 </li>
-							<hr/ class="line">
-							<li class="maxTemp">39</li>
-            </ul>
-          </div>
-
-          <div class="col-2" id="day5">
-            <ul class="horizontalListDay2">
-              <li class="horizontalListDay">SUN</li>
-             
-              <li class="horizontalListDay4Li3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="currentColor"
-                  class="bi bi-sun"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
-                  />
-                </svg>
-                <li>36°</li>
-							</li>
-							 <li class="horizontalListDayDescription">
-                <small>Hot with plently of sunshine</small>
-							</li>
-							<li class="minTemp"> 32 </li>
-							<hr/ class="line">
-							<li class="maxTemp">39</li>
-            </ul>
-          </div>
-        </div>
+        <div class="weather-forcast" id="forcast"></div>
       </div>
       <p class="source">
         <a href="https://github.com/n-e-d-a/123weather" target="_blank"
@@ -246,6 +101,6 @@
         by Neda Zare
       </p>
     </div>
-    <script src="index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>
