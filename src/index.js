@@ -92,7 +92,6 @@ function displayForcast(response) {
   forcastElement.innerHTML = forcastHTML;
 }
 function getForcast(coordinates) {
-  // console.log(coordinates);
   let apiKey = "802a9523a0d10578c154dd32831cb977";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForcast);
@@ -106,8 +105,7 @@ function displayTempreture(response) {
   let monthElement = document.querySelector("#date-num");
   let iconElement = document.querySelector("#icon");
 
-  celsiusTemp = response.data.main.temp;
-  //fahrenheitTemp=(celsiusTemp * 9) / 5 + 32;
+  //  celsiusTemp = response.data.main.temp;
 
   descriptionElement.innerHTML = response.data.weather[0].description;
   tempretureElement.innerHTML = Math.round(response.data.main.temp);
@@ -140,43 +138,9 @@ function handleSubmit(event) {
   search(cityInputElement);
 }
 
-function displayFahrenheitTemp(event) {
-  event.preventDefault();
-  // celsiusLink.classList.remove("active");
-  // fahrenheitLink.classList.add("active");
-  let fahrenheitTemp2 = (celsiusTemp * 9) / 5 + 32;
-  let temperetureElement = document.querySelector("#temp-num");
-  temperetureElement.innerHTML = Math.round(fahrenheitTemp2);
-
-  document.getElementById("f").style.color = "white";
-  document.getElementById("c").style.color = "#0D6EFD";
-}
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  // celsiusLink.classList.add("active");
-  // fahrenheitLink.classList.remove("active");
-  let temperetureElement = document.querySelector("#temp-num");
-  temperetureElement.innerHTML = Math.round(celsiusTemp);
-  document.getElementById("f").style.color = "#0D6EFD";
-  document.getElementById("c").style.color = "white";
-}
-
-let celsiusTemp = null;
-//let fahrenheitTemp=null;
+//let celsiusTemp = null;
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#temp-fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
-//.addEventListener('keypress', function (e) {
-/*  if (e.key === 'Enter') {
-    // code for enter
-  }
-});*/
-
-let celsiusLink = document.querySelector("#temp-celsius");
-celsiusLink.addEventListener("click", displayCelsiusTemp);
-
 search("Paris");
-//displayForcast();

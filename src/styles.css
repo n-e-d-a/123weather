@@ -87,6 +87,7 @@ bi bi-sun {
 }
 .horizontalListDayDescription {
   margin-top: 20px;
+  min-height: 50px;
 }
 .minTemp {
   margin-top: 20px;
@@ -107,6 +108,7 @@ bi bi-sun {
 }
 #icon {
   margin-top: -20px;
+  margin-left: -20px;
   background-image: radial-gradient(
     circle,
     #e6ecf5,
