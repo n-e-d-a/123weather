@@ -70,7 +70,7 @@ function displayForcast(response) {
                 forcastDay.dt
               )}</li>
              
-              <li class="horizontalListDay2Li3">
+              <li class="horizontalListDay2Li3" id="image-forcast">
               <img
               src="http://openweathermap.org/img/wn/${
                 forcastDay.weather[0].icon
@@ -92,7 +92,7 @@ function displayForcast(response) {
   forcastElement.innerHTML = forcastHTML;
 }
 function getForcast(coordinates) {
-  let apiKey = "802a9523a0d10578c154dd32831cb977";
+  let apiKey = "04b56cea58af88ba207e488d6cd103c8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForcast);
 }
@@ -126,7 +126,7 @@ function displayTempreture(response) {
   getForcast(response.data.coord);
 }
 function search(city) {
-  let apiKey = "802a9523a0d10578c154dd32831cb977";
+  let apiKey = "04b56cea58af88ba207e488d6cd103c8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayTempreture);
